@@ -43,6 +43,13 @@ public class ModbusTcpClient {
         this.port = port;
     }
 
+    public ModbusTcpClient(String ipAddress, int port, int connectTimeout) {
+        this.ipAddress = ipAddress;
+        this.port = port;
+        this.connectTimeout = connectTimeout;
+    }
+
+
     public void connect() throws IOException {
         var socket = new Socket(this.ipAddress, this.port);
         socket.setSoTimeout(this.connectTimeout);
