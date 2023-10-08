@@ -24,7 +24,7 @@ public class ModbusTcpClient {
     private int port = 502;
     private String ipAddress;
     private Socket socket = new Socket();
-    private int connectTimeout = 2000;
+    private int connectTimeout = 200000;
     private boolean useUdp = false;
 
     private InputStream inputStream;

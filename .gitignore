@@ -36,3 +36,6 @@ target/
 
 ### Misc ###
 src/main/java/pse/modbustcpclient/Main.java
+
+### Mac
+**/.DS_Store
