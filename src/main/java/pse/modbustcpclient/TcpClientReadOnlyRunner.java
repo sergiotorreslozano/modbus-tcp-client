@@ -32,6 +32,16 @@ public class TcpClientReadOnlyRunner {
             System.out.println("Registry read: " + registry);
         });
 
+        int[] holdingRegisters4 = client.readHoldingRegisters(70,4);
+        Arrays.stream(holdingRegisters4).forEach( registry -> {
+            System.out.println("Registry read: " + registry);
+        });
+
+        int[] holdingRegisters5 = client.readHoldingRegisters(80,4);
+        Arrays.stream(holdingRegisters5).forEach( registry -> {
+            System.out.println("Registry read: " + registry);
+        });
+
         client.disconnect();
         System.out.println("Stopping TcpClientReadOnlyRunner... ");
     }
